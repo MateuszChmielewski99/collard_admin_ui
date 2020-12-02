@@ -1,0 +1,13 @@
+.footer_container{
+    margin-top:10px;
+}
+
+.page_button{
+    box-sizing: border-box;
+    margin: 0 5px;
+    min-height: 30px;
+}
+
+.info{
+    margin-right: 35px;
+}

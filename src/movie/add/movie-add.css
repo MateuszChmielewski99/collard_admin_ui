@@ -1,0 +1,6 @@
+.MovieMainSection {
+  flex: 0 1 70vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

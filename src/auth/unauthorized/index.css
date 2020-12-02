@@ -1,0 +1,15 @@
+.unauth_container{
+    width: 100vw;
+    height: 100vh;
+    padding: 200px;
+}
+
+.unauth_info{
+    font-size: x-large;
+    text-align: center;
+}
+
+.sing_in_button{
+    width: fit-content;
+    align-self: center;
+}

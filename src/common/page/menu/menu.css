@@ -1,0 +1,16 @@
+.Menu_items_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 15vw;
+  height: 100vh;
+  background-color: #eeebeb;
+  color: #282c34;
+  padding: 20px;
+}
+
+.Menu_item {
+  font-size: 20px;
+  padding: 15px;
+  color: #3f51b5;
+}

@@ -1,0 +1,8 @@
+.movie_add_info--main_info {
+  display: flex;
+}
+
+.movie_add_info--main_info__title {
+  font: bold;
+  font-size: 2rem;
+}

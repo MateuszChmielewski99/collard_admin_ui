@@ -1,0 +1,7 @@
+.main {
+  padding: 25px;
+  height: calc(100vh - 114px);
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}

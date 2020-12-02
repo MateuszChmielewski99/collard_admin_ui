@@ -1,0 +1,28 @@
+.MenuDrowerFlexContainer {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+}
+
+.MenuIconArrow {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #282c34;
+}
+
+.MenuDrowerFlexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.MenuDrowerItem {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.MenuDrowrIcon {
+  padding-top: 8px;
+}

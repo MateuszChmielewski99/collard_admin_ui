@@ -1,0 +1,23 @@
+.m_button{
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.m_button_primary {
+  background-color: #3f51b5;
+}
+
+.m_button_disabled {
+  background-color: #909090;
+  text-shadow: 1px 1px #282c34;
+}
+
+.m_button_warning{
+  background-color: rgb(182, 0, 0);
+}

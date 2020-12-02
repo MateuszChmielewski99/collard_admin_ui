@@ -1,0 +1,16 @@
+.HeaderSection {
+  font-size: 35px;
+  color: black;
+}
+
+.HeaderSectionCtaItems {
+  padding-bottom: 6px;
+  height: 80%;
+  flex: 0 1;
+  margin-right: 10px;
+  min-width: 80px;
+}
+
+.HeaderSectionCtaItems:last-child{
+  margin-right: 0;
+}

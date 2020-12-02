@@ -1,0 +1,11 @@
+.Active {
+  color: #5261db;
+}
+
+.Inactive {
+  color: #3f51b5;
+  pointer-events: none;
+}
+.Breadcrumbs {
+  font-size: 100px;
+}
