@@ -39,6 +39,7 @@ export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
 
   const { signIn } = useGoogleLogin({
     onSuccess,
+    onFailure: (e) => {console.log(e)},
     clientId,
     isSignedIn: true,
   });
