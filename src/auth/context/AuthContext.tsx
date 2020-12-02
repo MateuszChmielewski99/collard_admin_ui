@@ -35,7 +35,9 @@ export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
     setIsSignIn(true);
   };
 
-  const clientId = '148743879435-od2n5gsuog38mv71b8r1j62vi1thgvjh.apps.googleusercontent.com'
+  const clientId = process.env.ENV !== 'dev' ?
+  '148743879435-7mucbmlta054dvt263valoi7g0qig5hp.apps.googleusercontent.com':
+  '148743879435-od2n5gsuog38mv71b8r1j62vi1thgvjh.apps.googleusercontent.com';
 
   const { signIn } = useGoogleLogin({
     onSuccess,
