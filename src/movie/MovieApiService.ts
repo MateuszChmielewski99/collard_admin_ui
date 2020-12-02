@@ -11,18 +11,18 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import serviceDiscovery from '../config/ServiceDiscovery';
 export class MovieApiService {
   private baseUrl: string = '';
-  private protocol = 'http';
+  private protocol = 'https';
   constructor() {
     const baseUrl = serviceDiscovery.getServiceUrl().ApiGatewayUrl;
     this.baseUrl = `${this.protocol}://${baseUrl}`;
   }
   save(movie: CreateMovieRequest): Promise<void> {
-    const requestUrl = `http://localhost:5050/movie/create`;
+    const requestUrl = `${this.baseUrl}/movie/create`;
     return axios.post(requestUrl, movie);
   }
 
   getById(id: string): Promise<AxiosResponse<MovieContract>> {
-    const requestUrl = `http://localhost:5050/movie`;
+    const requestUrl = `${this.baseUrl}movie`;
     const config: AxiosRequestConfig = {
       params: {
         id,
@@ -33,7 +33,7 @@ export class MovieApiService {
 
   uploadPosters(files: File[]):Promise<AxiosResponse<string[]>> {
     const formData: FormData = new FormData();
-    const requestUrl = `http://localhost:5050/movie/upload`;
+    const requestUrl = `${this.baseUrl}movie/upload`;
     files.forEach((f) => {
       formData.append('files', f);
     });
@@ -46,7 +46,7 @@ export class MovieApiService {
   fetchListingData(
     filters: MovieListingFilters
   ): Promise<AxiosResponse<MovieSearchResponse>> {
-    const requestUrl = `http://localhost:5050/movie/page`;
+    const requestUrl = `${this.baseUrl}movie/page`;
     const listingRequest: ListingRequest = {
       PageNumber: filters.pageNumber.toString(),
       PageSize: filters.pageSize.toString(),
@@ -92,7 +92,7 @@ export class MovieApiService {
   }
 
   fetchCountries(): Promise<AxiosResponse<EntityReference[]>> {
-    const requestUrl = `http://collardadminlookup-env.eba-qrhxjdbv.us-east-2.elasticbeanstalk.com/country/get_all`;
+    const requestUrl = `${this.baseUrl}/country/get_all`;
     return axios.get(requestUrl);
   }
 
