@@ -11,7 +11,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import serviceDiscovery from '../config/ServiceDiscovery';
 export class MovieApiService {
   private baseUrl: string = '';
-  private protocol = 'http';
+  private protocol = 'https';
   constructor() {
     const baseUrl = serviceDiscovery.getServiceUrl().ApiGatewayUrl;
     this.baseUrl = `${this.protocol}://${baseUrl}`;
