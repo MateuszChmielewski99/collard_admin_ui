@@ -22,7 +22,7 @@ export class MovieApiService {
   }
 
   getById(id: string): Promise<AxiosResponse<MovieContract>> {
-    const requestUrl = `${this.baseUrl}movie`;
+    const requestUrl = `${this.baseUrl}/movie`;
     const config: AxiosRequestConfig = {
       params: {
         id,
@@ -33,7 +33,7 @@ export class MovieApiService {
 
   uploadPosters(files: File[]):Promise<AxiosResponse<string[]>> {
     const formData: FormData = new FormData();
-    const requestUrl = `${this.baseUrl}movie/upload`;
+    const requestUrl = `${this.baseUrl}/movie/upload`;
     files.forEach((f) => {
       formData.append('files', f);
     });
@@ -46,7 +46,7 @@ export class MovieApiService {
   fetchListingData(
     filters: MovieListingFilters
   ): Promise<AxiosResponse<MovieSearchResponse>> {
-    const requestUrl = `${this.baseUrl}movie/page`;
+    const requestUrl = `${this.baseUrl}/movie/page`;
     const listingRequest: ListingRequest = {
       PageNumber: filters.pageNumber.toString(),
       PageSize: filters.pageSize.toString(),
